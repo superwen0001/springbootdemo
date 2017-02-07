@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface StudentService {
     List<StudentBean> select();
+
+    int add(StudentBean studentBean);
 }

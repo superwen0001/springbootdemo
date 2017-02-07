@@ -5,9 +5,11 @@ import java.util.Date;
 /**
  * Created by wenshiliang on 2017/2/7.
  */
+
 public class StudentBean {
     private int id;
     private String name;
+
 
     private Date createDate;
 

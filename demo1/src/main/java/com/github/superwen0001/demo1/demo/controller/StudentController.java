@@ -18,9 +18,14 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-    @RequestMapping("select")
+    @RequestMapping("/select")
     public List<StudentBean> select(){
         return studentService.select();
+    }
+
+    @RequestMapping("/add")
+    public int add(StudentBean bean){
+        return studentService.add(bean);
     }
 
 }
