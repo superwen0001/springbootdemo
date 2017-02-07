@@ -1,0 +1,88 @@
+spring.profiles.active: localdev
+
+info:
+    build:
+        artifact: @project.artifactId@
+        name: -@project.name@
+        description: -@project.description@
+        info.build.version: @project.version@
+server:
+    port: 8080
+
+
+#---
+#
+#spring:
+#    profiles: remotetest
+#    application.name: nirvana-account
+#    boot.admin.url: http://192.168.1.51:10025
+#
+#---
+
+spring:
+    datasource:
+        name: datasource
+        url: jdbc:oracle:thin:@//192.168.1.193:1521/lottery
+        username: credit
+        password: credit
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 1 from dual
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+    redis:
+        host: 192.168.1.51
+        port: 10105
+        pool.max-idle: 200
+        pool.min-idle: 3
+        max-wait: -1
+#    application.name: nirvana-account
+#    boot.admin.url: http://127.0.0.1:8090
+#    mvc:
+#        view:
+#            prefix: /templates/
+#            suffix: .ftl
+#    freemarker:
+#        cache: false
+#        request-context-attribute: request
+
+
+
+
+mybatis:
+#    type-aliases-package: tk.mybatis.springboot.model
+    mapper-locations: classpath:com/caiyi/financial/**/*.xml
+
+mapper:
+    mappers:
+        - com.caiyi.financial.**.mapper
+    not-empty: false
+#    identity: MYSQL
+
+pagehelper:
+    returnPageInfo: check
+    supportMethodsArguments: true
+    reasonable: false
+    params: count=countSql
+
+
+##运行状态
+endpoints:
+    enabled: true
+    info.enabled: true
+management:
+    context-path: /manage
+    port: 8081
+
+
