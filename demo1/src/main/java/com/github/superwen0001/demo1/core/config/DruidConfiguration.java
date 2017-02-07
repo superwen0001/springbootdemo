@@ -1,4 +1,4 @@
-package com.caiyi.financial.nirvana.core.config;
+package com.github.superwen0001.demo1.core.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -12,7 +12,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**

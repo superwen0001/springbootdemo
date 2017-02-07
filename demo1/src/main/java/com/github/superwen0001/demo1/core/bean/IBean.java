@@ -1,4 +1,4 @@
-package com.caiyi.financial.nirvana.core.bean;
+package com.github.superwen0001.demo1.core.bean;
 
 import java.io.Serializable;
 

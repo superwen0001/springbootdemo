@@ -14,20 +14,18 @@ server:
 #
 #spring:
 #    profiles: remotetest
-#    application.name: nirvana-account
-#    boot.admin.url: http://192.168.1.51:10025
 #
 #---
 
 spring:
     datasource:
         name: datasource
-        url: jdbc:oracle:thin:@//192.168.1.193:1521/lottery
-        username: credit
-        password: credit
+        url: jdbc:mysql://127.0.0.1:3306/demo1
+        username: root
+        password: 888888
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
-        driverClassName: oracle.jdbc.driver.OracleDriver
+        driverClassName: com.mysql.jdbc.Driver
         filters: stat
         maxActive: 20
         initialSize: 1
@@ -35,7 +33,7 @@ spring:
         minIdle: 1
         timeBetweenEvictionRunsMillis: 60000
         minEvictableIdleTimeMillis: 300000
-        validationQuery: select 1 from dual
+        validationQuery: select 1
         testWhileIdle: true
         testOnBorrow: false
         testOnReturn: false
@@ -47,7 +45,6 @@ spring:
         pool.max-idle: 200
         pool.min-idle: 3
         max-wait: -1
-#    application.name: nirvana-account
 #    boot.admin.url: http://127.0.0.1:8090
 #    mvc:
 #        view:
@@ -62,11 +59,12 @@ spring:
 
 mybatis:
 #    type-aliases-package: tk.mybatis.springboot.model
-    mapper-locations: classpath:com/caiyi/financial/**/*.xml
+#com.github.superwen0001.demo1.**.mapper
+    mapper-locations: classpath:com/github/superwen0001/demo1/**/*.xml
 
 mapper:
     mappers:
-        - com.caiyi.financial.**.mapper
+        - com.github.superwen0001.demo1.**.mapper
     not-empty: false
 #    identity: MYSQL
 

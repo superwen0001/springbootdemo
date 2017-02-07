@@ -1,6 +1,7 @@
-package com.caiyi.financial.nirvana.core.exception;
+package com.github.superwen0001.demo1.core.exception;
 
-import com.caiyi.financial.nirvana.core.bean.Result;
+
+import com.github.superwen0001.demo1.core.bean.Result;
 
 /**
  * Created by wenshiliang on 2016/4/22.
@@ -9,7 +10,7 @@ import com.caiyi.financial.nirvana.core.bean.Result;
 public abstract class BaseException extends RuntimeException {
     private String code = Result.ERROR;
 
-    public Result getBoltResult(){
+    public Result getResult(){
         return new Result(code,this.getMessage()!=null ? this.getMessage():"出错");
     }
 

@@ -1,8 +1,7 @@
-package com.caiyi.financial.nirvana.core.bean;
+package com.github.superwen0001.demo1.core.bean;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.github.pagehelper.Page;
 
 import java.io.Serializable;
 

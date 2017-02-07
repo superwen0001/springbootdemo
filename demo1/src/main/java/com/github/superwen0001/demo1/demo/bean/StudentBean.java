@@ -8,6 +8,7 @@ import java.util.Date;
 public class StudentBean {
     private int id;
     private String name;
+
     private Date createDate;
 
     public int getId() {

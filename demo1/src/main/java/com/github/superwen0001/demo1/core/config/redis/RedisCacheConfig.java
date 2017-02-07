@@ -1,4 +1,4 @@
-package com.caiyi.financial.nirvana.core.config.redis;
+package com.github.superwen0001.demo1.core.config.redis;
 
 
 import org.springframework.cache.CacheManager;

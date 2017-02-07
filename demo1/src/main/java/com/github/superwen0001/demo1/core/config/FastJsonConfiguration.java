@@ -1,4 +1,4 @@
-package com.caiyi.financial.nirvana.core.config;
+package com.github.superwen0001.demo1.core.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;

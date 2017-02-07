@@ -1,8 +1,7 @@
-package com.caiyi.financial.nirvana.core.config;
+package com.github.superwen0001.demo1.core.config;
 
-import com.alibaba.fastjson.JSONObject;
-import com.caiyi.financial.nirvana.core.bean.Result;
-import com.caiyi.financial.nirvana.core.exception.BaseException;
+import com.github.superwen0001.demo1.core.bean.Result;
+import com.github.superwen0001.demo1.core.exception.BaseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -33,7 +32,7 @@ public class GlobalExceptionHandler {
         Result result = null;
         if(e instanceof BaseException){
             LOGGER.error("拦截自定义异常",e);
-            result = ((BaseException) e) .getBoltResult();
+            result = ((BaseException) e) .getResult();
         }else{
             LOGGER.error("拦截异常", e);
             result = new Result(Result.ERROR,"error");
